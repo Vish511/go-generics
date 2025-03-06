@@ -61,6 +61,7 @@ func (sll *SinglyLinkedList[T]) Pop() *Node[T] {
 	var oldTail = sll.Tail
 	var nodeBeforeTail = sll.getNodeBeforeTail()
 	nodeBeforeTail.Next = nil
+	sll.Len--
 	return oldTail
 }
 
